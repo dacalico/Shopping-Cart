@@ -173,7 +173,7 @@ const Products = (props) => {
   // TODO: implement the restockProducts function
   const restockProducts = (url) => {
     doFetch(`${url}`);
-    setItems(data);
+    setItems([...items, ...data]);
   };
 
   return (
